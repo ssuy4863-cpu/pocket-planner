@@ -1,0 +1,155 @@
+/* ==========================================================================
+   TeamFit Toss/Notion Design System (Target: University Students)
+   Clean, Minimal, Modern & Intuitive Mobile UI
+   ========================================================================== */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  --primary: #3182f6;
+  --primary-hover: #1b64da;
+  --primary-light: #e8f3ff;
+  --bg-page: #f5f6f8;
+  --bg-card: #ffffff;
+  --text-main: #191f28;
+  --text-sub: #4e5968;
+  --text-muted: #8b95a1;
+  --border-light: #e5e8eb;
+  --border-subtle: #f0f2f5;
+  --radius-card: 20px;
+  --radius-btn: 14px;
+}
+
+* {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Mobile Frame Container */
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  padding-bottom: 96px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2e5e9;
+  border-radius: 4px;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Button & Interactive micro-animations */
+button, a {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:active, a:active {
+  transform: scale(0.97);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Toss Style Segmented Control */
+.segmented-control {
+  background-color: #f2f4f6;
+  border-radius: 12px;
+  padding: 3px;
+  display: flex;
+  gap: 2px;
+}
+.segmented-btn {
+  flex: 1;
+  padding: 6px 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7684;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.18s ease;
+  cursor: pointer;
+}
+.segmented-btn.active-미시작 {
+  background-color: #ffffff;
+  color: #191f28;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+}
+.segmented-btn.active-진행중 {
+  background-color: #ff9f00;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(255, 159, 0, 0.25);
+  font-weight: 700;
+}
+.segmented-btn.active-완료 {
+  background-color: #3182f6;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(49, 130, 246, 0.25);
+  font-weight: 700;
+}
+
+/* Badge styles (Modern Subtle Pastels) */
+.badge-diff-A {
+  background-color: #fef2f2;
+  color: #e11d48;
+  border: 1px solid #ffe4e6;
+}
+.badge-diff-B {
+  background-color: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fef3c7;
+}
+.badge-diff-C {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #dcfce7;
+}
+
+/* Member avatar refined palette */
+.member-color-0 { background-color: #eff6ff; color: #2563eb; border: 1px solid #dbeafe; }
+.member-color-1 { background-color: #faf5ff; color: #9333ea; border: 1px solid #f3e8ff; }
+.member-color-2 { background-color: #f0fdf4; color: #16a34a; border: 1px solid #dcfce7; }
+.member-color-3 { background-color: #fffbeb; color: #d97706; border: 1px solid #fef3c7; }
+.member-color-4 { background-color: #fdf2f8; color: #db2777; border: 1px solid #fce7f3; }
